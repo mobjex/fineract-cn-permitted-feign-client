@@ -1,3 +1,5 @@
+[![Release](https://jitpack.io/v/mobjex/fineract-cn-permitted-feign-client.svg)](https://jitpack.io/#mobjex/fineract-cn-permitted-feign-client)
+
 # Apache Fineract CN Permitted Feign Client Library
 
 This project provides secured access to other services via Feign. For this it uses anubis and identity to provide refresh and access tokens transparently.

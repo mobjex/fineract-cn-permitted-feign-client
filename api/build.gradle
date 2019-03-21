@@ -41,12 +41,12 @@ dependencies {
             [group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign'],
             [group: 'org.hibernate', name: 'hibernate-validator', version: versions.hibernatevalidator],
             [group: 'com.google.code.gson', name: 'gson'],
-            [group: 'org.apache.fineract.cn', name: 'api', version: versions.frameworkapi],
-            [group: 'org.apache.fineract.cn.identity', name: 'api', version: versions.frameworkidentity]
+            [group: 'com.github.mobjex', name: 'fineract-cn-api', version: versions.frameworkapi],
+            [group: 'com.github.mobjex.fineract-cn-identity', name: 'api', version: versions.frameworkidentity]
     )
 
     testCompile(
-            [group: 'org.apache.fineract.cn', name: 'test', version: versions.frameworktest],
+            [group: 'com.github.mobjex', name: 'fineract-cn-test', version: versions.frameworktest],
     )
 }
 

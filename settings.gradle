@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-rootProject.name = 'permitted-feign-client'
+rootProject.name = 'fineract-cn-permitted-feign-client'
 
 includeBuild 'api'
 includeBuild 'library'

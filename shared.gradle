@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-group 'org.apache.fineract.cn.permitted-feign-client'
-version '0.1.0-BUILD-SNAPSHOT'
+group 'com.github.mobjex.fineract-cn-permitted-feign-client'
+version 'develop-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'idea'
@@ -25,13 +25,13 @@ apply plugin: 'io.spring.dependency-management'
 
 
 ext.versions = [
-        frameworktest       : '0.1.0-BUILD-SNAPSHOT',
-        frameworkapi        : '0.1.0-BUILD-SNAPSHOT',
-        frameworkcassandra  : '0.1.0-BUILD-SNAPSHOT',
-        frameworklang       : '0.1.0-BUILD-SNAPSHOT',
-        frameworkidentity   : '0.1.0-BUILD-SNAPSHOT',
-        frameworkanubis     : '0.1.0-BUILD-SNAPSHOT',
-        frameworkservicestarter : '0.1.0-BUILD-SNAPSHOT',
+        frameworktest       : 'develop-SNAPSHOT',
+        frameworkapi        : 'develop-SNAPSHOT',
+        frameworkcassandra  : 'develop-SNAPSHOT',
+        frameworklang       : 'develop-SNAPSHOT',
+        frameworkidentity   : 'develop-SNAPSHOT',
+        frameworkanubis     : 'develop-SNAPSHOT',
+        frameworkservicestarter : 'develop-SNAPSHOT',
         jjwt                : '0.6.0',
         hibernatevalidator  : '5.3.0.Final',
         expiringmap         : '0.5.8'
@@ -45,10 +45,11 @@ tasks.withType(JavaCompile) {
 repositories {
     jcenter()
     mavenLocal()
+    maven { url 'https://jitpack.io' }
 }
 
 configurations {
-    compile.exclude group: 'org.apache.fineract.cn', module: 'mariadb'
+    compile.exclude group: 'com.github.mobjex', module: 'fineract-cn-mariadb'
     compile.exclude group: 'ch.vorburger', module: 'mariaDB4j'
 }
 
@@ -72,7 +73,7 @@ dependencies {
 
     testCompile(
             [group: 'org.springframework.boot', name: 'spring-boot-starter-test'],
-            [group: 'org.apache.fineract.cn', name: 'test', version: versions.frameworktest],
+            [group: 'com.github.mobjex', name: 'fineract-cn-test', version: versions.frameworktest],
     )
 }
 
